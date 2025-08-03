@@ -1,0 +1,55 @@
+[project]
+name = "text-analytics-samples"
+version = "0.1.0"
+description = "Text Analytics関連のサンプルプロジェクト"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    # テキスト分析・処理
+    "japanize-matplotlib",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "requests",
+    "scikit-learn",
+    "spacy[ja]",
+    "gensim",
+    "networkx",
+    "wordcloud",
+    "tqdm",
+    # その他
+    "pyvis",
+    "marimo>=0.14.16",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true

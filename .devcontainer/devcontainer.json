@@ -1,0 +1,22 @@
+{
+  "name": "Text Analytics Samples",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/astral-sh/uv/uv:latest": {}
+  },
+  "postCreateCommand": "uv sync --dev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.flake8",
+        "ms-python.mypy-type-checker"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localWorkspaceFolder}/.uv,target=/workspace/.uv,type=bind"
+  ]
+}
