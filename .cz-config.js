@@ -1,0 +1,20 @@
+module.exports = {
+  disableEmoji: false,
+  format: "【{emoji}: {type}】 {subject}",
+  maxMessageLength: 64,
+  minMessageLength: 3,
+  questions: ["type", "subject"],
+  scopes: [],
+  types: [
+    { value: "feat", name: "🎸 feat: 新機能追加" },
+    { value: "fix", name: "🐛 fix: バグ修正" },
+    { value: "refactor", name: "💡 refactor: コードリファクタ" },
+    { value: "test", name: "💍 test: テストコードの追加" },
+    { value: "style", name: "💄 style: コードの書式変更" },
+    { value: "chore", name: "🤖 chore: ドキュメント生成など" },
+    { value: "docs", name: "✏️ docs: ドキュメント変更" },
+    { value: "perf", name: "⚡️ perf: パフォーマンス改善" },
+    { value: "ci", name: "⚙️ ci: CI設定やスクリプト" },
+    { value: "wip", name: "🚧 wip: 作業中のコミット" },
+  ],
+};
